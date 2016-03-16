@@ -24,9 +24,13 @@
 		min-height: 35em;
 
 		h1 {
-			font-size: 3.25em;
-			font-weight: _font(weight-bold);
-			margin-bottom: _size(element-margin) * 0.25;
+					font-size: 4em;
+					font-weight: _font(weight-thin);
+					margin-bottom: _size(element-margin) * 0.5;
+		}
+
+		h2 {
+			font-size: 2.5em
 		}
 
 		p {
