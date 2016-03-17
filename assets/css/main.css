@@ -3685,9 +3685,7 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-image: url("images/overlay.png"), url("images/pattern-size1.svg");
 		background-position: top left, center center;
-		background-attachment: fixed, fixed;
 		background-size: auto, cover;
 		height: 100vh;
 		min-height: 35em;
