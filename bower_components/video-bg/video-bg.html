@@ -1,0 +1,36 @@
+<link rel="import" href="../components/polymer/polymer.html">
+<!--
+
+Set a video as your HTML background.
+
+##### Example
+    <video-bg srcs='["video.mp4","video.ogv", "video.webm"]' muted="muted"></video-bg>
+
+    @element video-bg
+    Set a video as your HTML background.
+    @src video src
+    @muted muted or ""
+    @status stable
+    @homepage http://github.com/hemanth/video-bg
+-->
+<polymer-element name="video-bg" attributes="poster srcs muted">
+
+    <template>
+        <link href="bgvideo.css" rel="stylesheet"/>
+        <video autoplay loop muted={{muted}} id="bgvid">
+          <template repeat="{{src in srcs}}">
+            <source src={{src}} type="{{src|getType}}">
+          </template>
+        </video>
+    </template>
+
+    <script>
+        Polymer('video-bg', {
+          created: function() {this.srcs=[];},
+          getType: function(src){
+            return 'video/'+src.substr(src.lastIndexOf('.') + 1)
+          }
+        });
+    </script>
+
+</polymer-element>
